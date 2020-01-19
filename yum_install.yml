@@ -1,0 +1,10 @@
+---
+- name: philippe
+  hosts: ansible
+  become: yes
+  tasks:
+  - name: Installing vim
+    yum:
+      name: htop
+      state: latest
+      update_cache: yes
