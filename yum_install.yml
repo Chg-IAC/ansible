@@ -1,6 +1,6 @@
 ---
 - name: philippe
-  hosts: ansible
+  hosts: all
   become: yes
   tasks:
   - name: Installing vim
