@@ -1,25 +1,28 @@
----
-- name: "Create a virtual machine on given ESXi hostname"
-      vmware_guest:
-        hostname: "172.180.0.200"
-        port: 443
-        username: "administrator@vsphere.local"
-        password: Espoire15
-        validate_certs: no
-        name: test_vm_0002
-        state: poweredoff
-        guest_id: centos64Guest
-        esxi_hostname: "172.180.0.100"
-        folder: ""
-        datacenter: "Datacenter"
-        disk:
-          - size_gb: 10
-            type: thin
-            datastore: datastore_1
-        hardware:
-          memory_mb: 512
-          num_cpus: 1
-          scsi: paravirtual
-        networks:
-          - name: VM Network
-            device_type: vmxnet3
+- name: "Create_vmi"
+  hosts: localhost
+  tasks:
+   - name: "Create a virtual ma"
+     vmware_guest:
+      hostname: "172.180.0.200"
+      port: 443
+      username: "administrator@vsphere.local"
+      password: Espoire15
+      validate_certs: no
+      name: test_vm_0002
+      state: poweredoff
+      guest_id: centos64Guest
+      esxi_hostname: "172.180.0.100"
+      folder: ""
+      datacenter: "Datacenter"
+      disk:
+        - size_gb: 10
+          type: thin
+          datastore: datastore_1
+      hardware:
+        memory_mb: 512
+        num_cpus: 1
+        scsi: paravirtual
+      networks:
+        - name: VM Network
+          device_type: vmxnet3
+
