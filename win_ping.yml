@@ -1,14 +1,10 @@
 ---
-- name: Ping Windows #attach the name for identification what we do with the task
-  hosts: windows #host who is in file /etc/ansible/hosts
-
-  vars:
-      Message: Toto
-
-  tasks: # In tasks we could have many command like win_ping
-  - name: Ping Windows #name of the command
-    win_ping: #command to launch
-
-  - name: send msg
-    #win_shell: msg.exe * "{{ Message }}"
-    win_shell: msg.exe * "hello"
+- name: philippe
+  hosts: ansible
+  become: yes
+  tasks:
+  - name: Installing vim
+    yum:
+      name: htop
+      state: latest
+      update_cache: yes
