@@ -4,7 +4,6 @@
    - name: "Create a virtual ma"
      vmware_guest:
       hostname: "172.180.0.200"
-      port: 443
       username: "administrator@vsphere.local"
       password: Espoire15
       validate_certs: no
