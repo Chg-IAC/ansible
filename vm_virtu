@@ -1,0 +1,30 @@
+---
+- name: Create a VM from a template
+  hosts: localhost
+
+  tasks:
+  - name: Create a VM from template
+    vmware_guest:
+      hostname: 172.180.0.200
+      username: administrator@vsphere.local
+      password: Espoire15
+      validate_certs: no
+      esxi_hostname: "172.180.0.100"
+      datacenter: "Datacenter"
+#      folder: /esxi3_local1/vm1/
+      name: testvm_3
+      state: present
+      disk:
+      - size_gb: 1
+        type: thin
+        datastore: datastore_1
+      hardware:
+        memory_mb: 512
+        num_cpus: 1
+        scsi: paravirtual
+#      networks:
+#      - name: 'VM Network'
+#        mac: aa:bb:dd:aa:00:14
+      wait_for_ip_address: yes
+#    delegate_to: localhost
+    register: deploy
