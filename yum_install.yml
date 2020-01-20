@@ -5,6 +5,6 @@
   tasks:
   - name: Installing vim
     yum:
-      name: htop
+      name: vim
       state: latest
       update_cache: yes
