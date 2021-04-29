@@ -5,7 +5,7 @@
      vmware_guest:
       hostname: "172.180.0.200"
       username: "administrator@vsphere.local"
-      password: Espoire15
+      password: password
       validate_certs: no
       name: test_vm_0002
       state: poweredoff
