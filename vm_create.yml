@@ -10,7 +10,7 @@
       name: test_vm_0002
       state: poweredoff
       guest_id: centos64Guest
-      esxi_hostname: "172.180.0.100"
+      esxi_hostname: "password"
       folder: ""
       datacenter: "Datacenter"
       disk:
